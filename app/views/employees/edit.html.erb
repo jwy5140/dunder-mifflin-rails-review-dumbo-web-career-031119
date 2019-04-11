@@ -1,0 +1,28 @@
+<h1>Edit <%=@employee.full_name%></h1>
+<%=form_for @employee do |e|%>
+<p>
+    <%=e.label :first_name%>
+    <%=e.text_field :first_name%>
+</p>
+<p>
+    <%=e.label :last_name%>
+    <%=e.text_field :last_name%>
+</p>
+<p>
+    <%=e.label :alias%>
+    <%=e.text_field :alias%>
+</p>
+<p>
+    <%=e.label :title%>
+    <%=e.text_field :title%>
+</p>
+<p>
+    <%=e.label :office%>
+    <%=e.text_field :office%>
+</p>
+<p>
+    <%=e.collection_select(:dog_id, Dog.all, :id, :name)%>
+<p>
+<%=e.submit%>
+</p>
+<%end%>

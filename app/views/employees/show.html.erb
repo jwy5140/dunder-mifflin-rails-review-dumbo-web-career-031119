@@ -1,0 +1,8 @@
+<h1>Page for <%=@employee.full_name%></h1>
+<img src="<%=@employee.img_url%>">
+
+<h2>Alias: <%=@employee.alias%></h2>
+<h2>Title: <%=@employee.title%></h2>
+<h2>Office: <%=@employee.office%></h2>
+<%=link_to "Edit Employee", edit_employee_path(@employee)%>
+

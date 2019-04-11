@@ -1,0 +1,5 @@
+<h1>Dunder Mifflin Employee Index</h1>
+<h2><%=link_to "Create New Employee", new_employee_path%></h2>
+<%@employees.each do |e|%>
+<p><%=link_to "#{e.full_name}", employee_path(e.id)%></p>
+<%end%>
