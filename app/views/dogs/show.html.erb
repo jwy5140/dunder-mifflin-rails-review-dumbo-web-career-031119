@@ -5,6 +5,6 @@
 <br>
 <br>
 <h1>List of Owners</h1>
-<%=@dog.employees.each do |e|%>
-<p><%=link_to "#{e.name}", employee_path(e)%></p>
+<%@dog.employees.each do |e|%>
+<p><%=link_to "#{e.full_name}", employee_path(e)%></p>
 <%end%>
